@@ -1,0 +1,14 @@
+//Извлекаем запись
+GET http://localhost:8080/netology_servlets_war_exploded/api/posts/1
+
+###
+
+//Добавляем запись
+POST http://localhost:8080/netology_servlets_war_exploded/api/posts
+Content-Type: application/json
+
+{
+  "id": 0,
+  "content": "Last Post"
+}
+
