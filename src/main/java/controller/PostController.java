@@ -46,7 +46,7 @@ public class PostController {
     public void removeById(int id, HttpServletResponse response) {
         // TODO: deserialize request & serialize response
         response.setContentType(APPLICATION_JSON);
-        final var gson = new Gson();
+        //final var gson = new Gson();
         service.removeById(id);
     }
 }
