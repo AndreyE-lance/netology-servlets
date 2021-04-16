@@ -18,11 +18,8 @@ public class MainServlet extends HttpServlet {
 
     @Override
     public void init() {
-        AnnotationConfigApplicationContext context= new AnnotationConfigApplicationContext("netology.servlets");
+        AnnotationConfigApplicationContext context= new AnnotationConfigApplicationContext(netology.servlets.Config.class);
         controller = context.getBean(PostController.class);
-        final var repository = context.getBean("postRepository");
-        final var service = context.getBean(PostService.class);
-
     }
 
     @Override
@@ -45,7 +42,7 @@ public class MainServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)  {
         try {
             var path = req.getRequestURI();
             if (path.equals(PTH)) {
@@ -59,7 +56,7 @@ public class MainServlet extends HttpServlet {
     }
 
     @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp)  {
         try {
             var path = req.getRequestURI();
             if (path.matches(PTH_ID)) {

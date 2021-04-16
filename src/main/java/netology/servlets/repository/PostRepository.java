@@ -2,14 +2,14 @@ package netology.servlets.repository;
 
 import netology.servlets.model.Post;
 
-import org.springframework.stereotype.Repository;
+
 
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Repository
+
 public class PostRepository {
     private List<Post> postList = new CopyOnWriteArrayList<>();
     private AtomicInteger postID = new AtomicInteger(0);
