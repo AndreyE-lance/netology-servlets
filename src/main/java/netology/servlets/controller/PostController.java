@@ -1,12 +1,14 @@
-package controller;
+package netology.servlets.controller;
 
 import com.google.gson.Gson;
-import model.Post;
-import service.PostService;
+import netology.servlets.model.Post;
+import netology.servlets.service.PostService;
+
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.Reader;
+
 
 public class PostController {
     public static final String APPLICATION_JSON = "application/json";
